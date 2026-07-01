@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V Food Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">V</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#help">Help</a></li>
+        </ul>
+
+        <div class="cart-box">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </nav>
+
+    <!-- Home -->
+    <section id="home" class="hero">
+        <h1>Welcome to V Food Hub</h1>
+        <p>Delicious food delivered to your doorstep.</p>
+        <a href="#menu" class="btn">Order Now</a>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            V Food Hub offers fresh and tasty meals at affordable prices.
+            We focus on quality, hygiene and customer satisfaction.
+        </p>
+    </section>
+
+    <!-- Food Menu -->
+    <section id="menu">
+
+        <h2>Our Menu</h2>
+
+        <div class="foods">
+
+            <div class="food">
+                <img src="burger.jpg">
+                <h3>Burger</h3>
+                <p>₹120</p>
+                <button onclick="addToCart('Burger',120)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="food">
+                <img src="dosa.jpg">
+                <h3>Dosa</h3>
+                <p>₹80</p>
+                <button onclick="addToCart('Dosa',80)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="food">
+                <img src="idli.jpg">
+                <h3>Idli</h3>
+                <p>₹50</p>
+                <button onclick="addToCart('Idli',50)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="food">
+                <img src="briyani.jpg">
+                <h3>Biryani</h3>
+                <p>₹220</p>
+                <button onclick="addToCart('Biryani',220)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="food">
+                <img src="gril.jpg">
+                <h3>Chicken Grill</h3>
+                <p>₹280</p>
+                <button onclick="addToCart('Chicken Grill',280)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="food">
+                <img src="noodles.jpg">
+                <h3>Noodles</h3>
+                <p>₹150</p>
+                <button onclick="addToCart('Noodles',150)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="food">
+                <img src="parotta.jpg">
+                <h3>Parotta</h3>
+                <p>₹90</p>
+                <button onclick="addToCart('Parotta',90)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="food">
+                <img src="san.jpg">
+                <h3>Sandwich</h3>
+                <p>₹110</p>
+                <button onclick="addToCart('Sandwich',110)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="food">
+                <img src="swa.jpg">
+                <h3>Shawarma</h3>
+                <p>₹180</p>
+                <button onclick="addToCart('Shawarma',180)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="food">
+                <img src="fish.jpg">
+                <h3>Fish Curry</h3>
+                <p>₹240</p>
+                <button onclick="addToCart('Fish Curry',240)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="food">
+                <img src="fish.jpg">
+                <h3>Fish Fry</h3>
+                <p>₹200</p>
+                <button onclick="addToCart('Fish Fry',200)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="food">
+                <img src="cooki.jpg">
+                <h3>Cookies</h3>
+                <p>₹60</p>
+                <button onclick="addToCart('Cookies',60)">
+                    Add to Cart
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Cart -->
+    <section class="cart-section">
+
+        <h2>Your Cart</h2>
+
+        <ul id="cart-items"></ul>
+
+        <h3>Total : ₹<span id="total">0</span></h3>
+
+        <button onclick="payNow()">
+            Proceed payment
+        </button>
+
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>Email : vfoodhub@gmail.com</p>
+        <p>Phone : +91 9894670874</p>
+
+    </section>
+
+    <!-- Help -->
+    <section id="help">
+
+        <h2>Help Center</h2>
+
+        <p>
+            For support regarding orders, refunds,
+            delivery issues contact our customer support.
+        </p>
+
+    </section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
